@@ -3,7 +3,7 @@
 1. PHP 8
 2. LARAVEL 9
 3. PYTHON (foi utilizado para teste a versão 3.10.4)
-4. Bando de dados que foi utilizado 10.4.24-MariaDB
+4. Banco de dados que foi utilizado 10.4.24-MariaDB
 
 ***COMO O SISTEMA GERA OS GOLS***
 
