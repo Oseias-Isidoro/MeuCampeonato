@@ -1,3 +1,10 @@
+***REQUISITOS***
+
+1. PHP 8
+2. LARAVEL 9
+3. PYTHON (foi utilizado para teste a versão 3.10.4)
+4. Bando de dados que foi utilizado 10.4.24-MariaDB
+
 ***COMO O SISTEMA GERA OS GOLS***
 
 através do um script python
@@ -23,6 +30,7 @@ while ($this->isTied($goals)) {
 7. Executar o comando ***php artisan test***
 8. Executar o comando ***php artisan serve***, abra o sistema no navegado e sera possível  ver a home do sistema
 <img src="https://github.com/Oseias-Isidoro/MeuCampeonato/blob/main/Captura%20de%20tela%202022-09-01%20172901.png?raw=true" width="400">
+
 9. Abra o programa ***insomnia*** e faça a importação do arquivo ***Insomnia_2022-09-01.json*** que esta na raiz do projeto
 10. No programa ***insomnia*** na pasta ***Leagues*** request ***create***
 11. execute um request passando o parâmetro  ***name***, o valor deste parâmetro sera o nome do campeonato, se ocorrer tudo bem a resposta sera assim:
