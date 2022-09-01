@@ -24,7 +24,7 @@ while ($this->isTied($goals)) {
 1. Clone o projeto
 2. Na raiz do projeto execute ***composer install***
 3. Renomear o arquivo .env.exemplo para .env
-4. Criar um bando de dados e adicionar as credenciar no arquivo .env
+4. Criar um banco de dados e adicionar as credenciar no arquivo .env
 5. Executar o comando ***php artisan key:generate*** 
 6. Executar o comando ***php artisan migrate***
 7. Executar o comando ***php artisan test***
