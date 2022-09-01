@@ -38,6 +38,11 @@ class LeagueTeam extends Model
         $this->attributes['slug'] = Str::slug($value);
     }
 
+    public function getScoreAttribute()
+    {
+        return $this->goals - $this->goals_taken;
+    }
+
     public function markAsEliminated()
     {
         $this->status = 'eliminated';
