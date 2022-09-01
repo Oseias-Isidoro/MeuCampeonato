@@ -25,10 +25,6 @@ class UpdateLeagueTeamRequest extends FormRequest
     {
         return [
             'name' => ['string'],
-            'goals' => ['integer'],
-            'goals_taken' => ['integer'],
-            'phase' => ['in:quarterfinals,semifinals,final,third_place'],
-            'status' => ['in:eliminated,active,champion,second,third']
         ];
     }
 }
