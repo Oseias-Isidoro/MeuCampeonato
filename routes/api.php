@@ -16,6 +16,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::resource('leagues', \App\Http\Controllers\api\LeagueController::class);
 
+Route::resource('teams', \App\Http\Controllers\api\LeagueTeamController::class)->except(['store']);
+Route::post('league/{league}/teams', [\App\Http\Controllers\api\LeagueTeamController::class, 'store']);
+
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
