@@ -37,10 +37,35 @@ class League extends Model
         return $this->hasMany(LeagueMatch::class, 'league_id');
     }
 
+    public function finalMatch(): Model|HasMany
+    {
+        return $this->matches()->where('phase', 'final')->first();
+    }
+
+    public function thirdPlaceMatch(): Model|HasMany
+    {
+        return $this->matches()->where('phase', 'third_place')->first();
+    }
+
+    public function semifinalMatch(): \Illuminate\Database\Eloquent\Collection
+    {
+        return $this->matches()->where('phase', 'semifinals')->get();
+    }
+
+    public function quarterfinalsMatches(): \Illuminate\Database\Eloquent\Collection
+    {
+        return $this->matches()->where('phase', 'quarterfinals')->get();
+    }
+
     public function setNameAttribute($value)
     {
         $this->attributes['name'] = $value;
         $this->attributes['slug'] = Str::slug($value);
+    }
+
+    public function isFinished()
+    {
+        return $this->status === 'finished';
     }
 
     public function finish()
