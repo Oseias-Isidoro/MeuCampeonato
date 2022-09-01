@@ -17,6 +17,8 @@ class League extends Model
 {
     use HasFactory, softDeletes;
 
+    public const TEAMS_MAX = 8;
+
     public $timestamps = true;
 
     protected $fillable = [
@@ -24,6 +26,11 @@ class League extends Model
         'slug',
         'status'
     ];
+
+    public function teams(): HasMany
+    {
+        return $this->hasMany(LeagueTeam::class, 'league_id');
+    }
 
     public function setNameAttribute($value)
     {
