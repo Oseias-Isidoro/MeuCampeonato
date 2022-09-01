@@ -6,6 +6,31 @@
 
         <div class="row">
             <div class="col-7">
+
+                <h3 class="text-center mb-3 mt-5">Resultado Final</h3>
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>Posição</th>
+                        <th>Time</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="table-primary">Campeão</td>
+                            <td class="table-primary">{{$league->getChampionshipTeam()->name}}</td>
+                        </tr>
+                        <tr>
+                            <td class="table-primary">Vice-campeão</td>
+                            <td class="table-primary">{{$league->getSecondPlaceTeam()->name}}</td>
+                        </tr>
+                        <tr>
+                            <td class="table-primary">Terceiro Lugar</td>
+                            <td class="table-primary">{{$league->getThirdPlaceTeam()->name}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+
                 <h3 class="text-center mb-3 mt-5">jogo final</h3>
                 <table class="table table-striped">
                     <thead>
