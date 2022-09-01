@@ -32,6 +32,21 @@ class League extends Model
         return $this->hasMany(LeagueTeam::class, 'league_id');
     }
 
+    public function getChampionshipTeam(): Model|HasMany|null
+    {
+        return $this->teams()->where('status', 'champion')->first();
+    }
+
+    public function getSecondPlaceTeam(): Model|HasMany|null
+    {
+        return $this->teams()->where('status', 'second')->first();
+    }
+
+    public function getThirdPlaceTeam(): Model|HasMany|null
+    {
+        return $this->teams()->where('status', 'third')->first();
+    }
+
     public function matches(): HasMany
     {
         return $this->hasMany(LeagueMatch::class, 'league_id');
