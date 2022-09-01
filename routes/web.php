@@ -13,6 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::resource('leagues', \App\Http\Controllers\LeagueController::class);
+
+Route::get('/', [\App\Http\Controllers\LeagueController::class, 'index'])->name('home');
