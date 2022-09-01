@@ -122,13 +122,13 @@ class GameService
             $match->team_outside_goals = $goals['team_outside'];
             $match->save();
 
-            // atualiza as dados so time da casa
+            // atualiza os dados do time da casa
             $match->getTeamHome->phase = $phase;
             $match->getTeamHome->goals += $goals['team_home'];
             $match->getTeamHome->goals_taken += $goals['team_outside'];
             $match->getTeamHome->save();
 
-            // atualiza as dados so time que esta jogando fora de casa
+            // atualiza os dados do time que esta jogando fora de casa
             $match->getTeamOutside->phase = $phase;
             $match->getTeamOutside->goals += $goals['team_outside'];
             $match->getTeamOutside->goals_taken += $goals['team_home'];
