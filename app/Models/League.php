@@ -25,6 +25,11 @@ class League extends Model
         'status'
     ];
 
+    public function teams(): HasMany
+    {
+        return $this->hasMany(LeagueTeam::class, 'league_id');
+    }
+
     public function setNameAttribute($value)
     {
         $this->attributes['name'] = $value;
