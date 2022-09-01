@@ -17,6 +17,8 @@ class League extends Model
 {
     use HasFactory, softDeletes;
 
+    public const TEAMS_MAX = 8;
+
     public $timestamps = true;
 
     protected $fillable = [

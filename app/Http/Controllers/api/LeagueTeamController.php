@@ -30,7 +30,7 @@ class LeagueTeamController extends Controller
      */
     public function store(StoreLeagueTeamRequest $request, League $league): JsonResponse
     {
-        if ($league->teams()->count() >= 8)
+        if ($league->teams()->count() >= League::TEAMS_MAX)
             return response()->json(['message' => 'um campeonato não pode ter mais de 8 times'], 400);
 
         $team = $league->teams()->create($request->validated());
