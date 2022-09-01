@@ -32,6 +32,11 @@ class League extends Model
         return $this->hasMany(LeagueTeam::class, 'league_id');
     }
 
+    public function matches(): HasMany
+    {
+        return $this->hasMany(LeagueMatch::class, 'league_id');
+    }
+
     public function setNameAttribute($value)
     {
         $this->attributes['name'] = $value;

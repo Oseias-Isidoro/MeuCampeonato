@@ -19,6 +19,9 @@ Route::resource('leagues', \App\Http\Controllers\api\LeagueController::class);
 Route::resource('teams', \App\Http\Controllers\api\LeagueTeamController::class)->except(['store']);
 Route::post('league/{league}/teams', [\App\Http\Controllers\api\LeagueTeamController::class, 'store']);
 
+Route::resource('matches', \App\Http\Controllers\api\LeagueMatchController::class)->except(['store', 'update', 'edit', 'delete']);
+
+
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
