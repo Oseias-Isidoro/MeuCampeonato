@@ -15,4 +15,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::resource('leagues', \App\Http\Controllers\LeagueController::class);
 
-Route::get('/', [\App\Http\Controllers\LeagueController::class, 'index']);
+Route::get('/', [\App\Http\Controllers\LeagueController::class, 'index'])->name('home');
