@@ -7,11 +7,11 @@
 
 ***COMO O SISTEMA GERA OS GOLS***
 
-através do um script python
+através de um script python
 
 ***COMO O SISTEMA LIDA COM EMPATES***
 
-o sistema inicia os pênaltis, até que o empate seja resolvido
+o sistema roda um loop de pênaltis até que o empate seja resolvido
 ```php
 // Esse while representa as cobranças de pênaltis, o loop continuara até que o empate seja resolvido
 while ($this->isTied($goals)) {
